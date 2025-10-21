@@ -16,14 +16,14 @@ int DICE = 100;        // вірогідність повороту
 int STOP_FACTOR = 5;   // віргогідність закінчення
 int FRAMERATE = 250;   // пауза на один фрейм 
 
-String midiDevice = "Minilab3"; // індикатор міді-девайсу
-//String midiDevice = "Akai MPD32";
+//String midiDevice = "Minilab3"; // індикатор міді-девайсу
+String midiDevice = "Akai MPD32";
 ////////////////////////////////////////////////////////////////////////////////
 
 //////////////////////// MIDI ASSIGNMENT ///////////////////////////////////////
 void setup_controlls(){
   
-  setControl("DICE", 86, 0, 100);
+  setControl("DICE", 12, -5, 130);
   setControl("SHADE", 87, 1, 50);
   setControl("scale", 89, 0, 10);
   setControl("OFFSET", 90, 0, 200);
@@ -45,7 +45,7 @@ void setup()
 {
   
   surface.setLocation(0, 0);  // ду запускати рендер Х,У
-  size(480, 3840);  // розміри рендера
+  size(1200, 3600);  // розміри рендера
   
   MidiBus.list();
   myBus = new MidiBus(this, midiDevice, "Java Sound Synthesizer");
