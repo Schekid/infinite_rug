@@ -23,15 +23,15 @@ String midiDevice = "Akai MPD32";
 //////////////////////// MIDI ASSIGNMENT ///////////////////////////////////////
 void setup_controlls(){
   
-  setControl("DICE", 12, -5, 130);
-  setControl("SHADE", 87, 1, 50);
-  setControl("scale", 89, 0, 10);
-  setControl("OFFSET", 90, 0, 200);
-  setControl("X_SCALE_FACTOR", 110, 1, 20);
-  setControl("Y_SCALE_FACTOR", 111, 0, 20);
-  setControl("FRAMERATE", 116, 10, 500);
-  setControl("STOP_FACTOR", 117, 0, 100);
-  setControl("NUM_THREADS", 14, 0, 40);
+  setControl("DICE", 14, 0, 130);
+  setControl("SHADE", 19, 0, 130);
+  setControl("scale", 13, 1, 12);
+  setControl("OFFSET", 2, 0, 200);
+  setControl("X_SCALE_FACTOR", 17, 1, 20);
+  setControl("Y_SCALE_FACTOR", 18, 0, 6);
+  setControl("FRAMERATE", 16, 10, 500);
+  setControl("STOP_FACTOR", 15, 0, 100);
+  setControl("NUM_THREADS", 12, 0, 40);
   
 }
 ////////////////////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@ PShape arrows[];
 
 void setup()
 {
-  
+  strokeJoin(ROUND);
   surface.setLocation(0, 0);  // ду запускати рендер Х,У
   size(1200, 3600);  // розміри рендера
   
